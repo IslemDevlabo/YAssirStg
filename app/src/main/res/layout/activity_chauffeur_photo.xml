@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChauffeurPhoto">
+
+    <TextView
+        android:id="@+id/nom_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="00"
+        app:layout_constraintStart_toStartOf="@+id/phone_number_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phone_number_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="23dp"
+        android:text="00"
+        app:layout_constraintStart_toEndOf="@+id/phone_text_id"
+        app:layout_constraintTop_toBottomOf="@+id/nom_id" />
+
+    <TextView
+        android:id="@+id/nom_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="NOM ="
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phone_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Phone N° ="
+        app:layout_constraintBaseline_toBaselineOf="@+id/phone_number_id"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/profile_cam_id"
+        android:layout_width="74dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:onClick="captureProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_img_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_img_id"
+        app:layout_constraintVertical_bias="0.446"
+        app:srcCompat="@drawable/camera_icon" />
+
+    <ImageButton
+        android:id="@+id/car_cam_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="87dp"
+        android:onClick="captureCar"
+        android:src="@drawable/car_50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_img_id"
+        app:layout_constraintVertical_bias="0.785" />
+
+    <ImageView
+        android:id="@+id/profile_img_id"
+        android:layout_width="146dp"
+        android:layout_height="146dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/user_50px"
+        app:layout_constraintBottom_toTopOf="@+id/car_img_id"
+        app:layout_constraintEnd_toEndOf="@+id/car_img_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/car_img_id"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_id"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <ImageView
+        android:id="@+id/car_img_id"
+        android:layout_width="157dp"
+        android:layout_height="139dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/sedan_50px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toEndOf="@+id/car_cam_id" />
+
+</android.support.constraint.ConstraintLayout>
